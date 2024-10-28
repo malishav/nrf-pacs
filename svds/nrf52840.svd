@@ -1264,7 +1264,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>FORCEPROTECT</name>
           <description>Software force enable APPROTECT mechanism until next reset.</description>
           <addressOffset>0x550</addressOffset>
-          <access>read-writeonce</access>
+          <access>read-writeOnce</access>
           <resetValue>0xFFFFFFFF</resetValue>
           <size>0x20</size>
           <fields>
@@ -26306,8 +26306,8 @@ POSSIBILITY OF SUCH DAMAGE.
           <fields>
             <field>
               <name>SLEEPSTATE</name>
-              <description>Reflects the sleep state during automatic collision resolution. Set to IDLE 
-        by a GOIDLE task. Set to SLEEP_A when a valid SLEEP_REQ frame is received or by a 
+              <description>Reflects the sleep state during automatic collision resolution. Set to IDLE
+        by a GOIDLE task. Set to SLEEP_A when a valid SLEEP_REQ frame is received or by a
         GOSLEEP task.</description>
               <lsb>0</lsb>
               <msb>0</msb>
@@ -41106,7 +41106,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <name>ADDR</name>
             <description>Description cluster: Start address of region to protect. The start address must be word-aligned.</description>
             <addressOffset>0x000</addressOffset>
-            <access>read-writeonce</access>
+            <access>read-writeOnce</access>
             <resetValue>0x00000000</resetValue>
             <size>0x20</size>
             <fields>
@@ -41122,7 +41122,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <name>SIZE</name>
             <description>Description cluster: Size of region to protect counting from address ACL[n].ADDR. Writing a '0' has no effect.</description>
             <addressOffset>0x004</addressOffset>
-            <access>read-writeonce</access>
+            <access>read-writeOnce</access>
             <resetValue>0x00000000</resetValue>
             <size>0x20</size>
             <fields>
@@ -41138,7 +41138,7 @@ POSSIBILITY OF SUCH DAMAGE.
             <name>PERM</name>
             <description>Description cluster: Access permissions for region n as defined by start address ACL[n].ADDR and size ACL[n].SIZE</description>
             <addressOffset>0x008</addressOffset>
-            <access>read-writeonce</access>
+            <access>read-writeOnce</access>
             <resetValue>0x00000000</resetValue>
             <size>0x20</size>
             <fields>
@@ -57795,7 +57795,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <fields>
             <field>
               <name>VALUE</name>
-              <description>Write the initial hash value before start of digest operation, and read the final hash value result after 
+              <description>Write the initial hash value before start of digest operation, and read the final hash value result after
           the digest operation has been completed.</description>
               <lsb>0</lsb>
               <msb>31</msb>
@@ -58733,7 +58733,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>HOST_IOT_KPRTL_LOCK</name>
           <description>This write-once register is the K_PRTL lock register. When this register is set, K_PRTL cannot be used and a zeroed key will be used instead. The value of this register is saved in the CRYPTOCELL AO power domain.</description>
           <addressOffset>0xA4C</addressOffset>
-          <access>read-writeonce</access>
+          <access>read-writeOnce</access>
           <resetValue>0x00000000</resetValue>
           <size>0x20</size>
           <fields>
@@ -58761,7 +58761,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>HOST_IOT_KDR0</name>
           <description>This register holds bits 31:0 of K_DR. The value of this register is saved in the CRYPTOCELL AO power domain. Reading from this address returns the K_DR valid status indicating if K_DR is successfully retained.</description>
           <addressOffset>0xA50</addressOffset>
-          <access>read-writeonce</access>
+          <access>read-writeOnce</access>
           <resetValue>0x00000000</resetValue>
           <size>0x20</size>
           <fields>
@@ -58789,7 +58789,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>HOST_IOT_KDR1</name>
           <description>This register holds bits 63:32 of K_DR. The value of this register is saved in the CRYPTOCELL AO power domain.</description>
           <addressOffset>0xA54</addressOffset>
-          <access>writeonce</access>
+          <access>writeOnce</access>
           <resetValue>0x00000000</resetValue>
           <size>0x20</size>
           <fields>
@@ -58805,7 +58805,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>HOST_IOT_KDR2</name>
           <description>This register holds bits 95:64 of K_DR. The value of this register is saved in the CRYPTOCELL AO power domain.</description>
           <addressOffset>0xA58</addressOffset>
-          <access>writeonce</access>
+          <access>writeOnce</access>
           <resetValue>0x00000000</resetValue>
           <size>0x20</size>
           <fields>
@@ -58821,7 +58821,7 @@ POSSIBILITY OF SUCH DAMAGE.
           <name>HOST_IOT_KDR3</name>
           <description>This register holds bits 127:96 of K_DR. The value of this register is saved in the CRYPTOCELL AO power domain.</description>
           <addressOffset>0xA5C</addressOffset>
-          <access>writeonce</access>
+          <access>writeOnce</access>
           <resetValue>0x00000000</resetValue>
           <size>0x20</size>
           <fields>
@@ -58846,7 +58846,7 @@ POSSIBILITY OF SUCH DAMAGE.
               <description>Life-cycle state value. This field is write-once per reset.</description>
               <lsb>0</lsb>
               <msb>2</msb>
-              <access>read-writeonce</access>
+              <access>read-writeOnce</access>
               <enumeratedValues>
                 <enumeratedValue>
                   <name>DebugEnable</name>
