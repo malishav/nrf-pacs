@@ -9,6 +9,7 @@ edition.workspace = true
 readme.workspace = true
 
 [dependencies]
+critical-section = { version = "1.0", optional = true }
 cortex-m.workspace = true
 vcell.workspace = true
 
