@@ -1,11 +1,11 @@
 [package]
 name = "nrf54l15-app-pac"
-description = "Peripheral Access Crate for Nordic's nrf54l15 SoC"
+description = "Peripheral Access Crate for Nordic's nrf54l15-app microcontroller"
 version.workspace = true
-edition.workspace = true
 keywords.workspace = true
 license.workspace = true
 repository.workspace = true
+edition.workspace = true
 readme.workspace = true
 
 [dependencies]

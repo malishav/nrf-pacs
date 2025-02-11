@@ -54,8 +54,6 @@ pub enum Txpower {
     Neg18dBm = 3,
     #[doc = "2: -20 dBm"]
     Neg20dBm = 2,
-    #[doc = "2: -22 dBm"]
-    Neg22dBm = 2,
     #[doc = "1: -28 dBm"]
     Neg28dBm = 1,
     #[doc = "304: -40 dBm"]
@@ -104,7 +102,6 @@ impl TxpowerR {
             4 => Some(Txpower::Neg16dBm),
             3 => Some(Txpower::Neg18dBm),
             2 => Some(Txpower::Neg20dBm),
-            2 => Some(Txpower::Neg22dBm),
             1 => Some(Txpower::Neg28dBm),
             304 => Some(Txpower::Neg40dBm),
             272 => Some(Txpower::Neg46dBm),
@@ -230,11 +227,6 @@ impl TxpowerR {
     #[inline(always)]
     pub fn is_neg20d_bm(&self) -> bool {
         *self == Txpower::Neg20dBm
-    }
-    #[doc = "-22 dBm"]
-    #[inline(always)]
-    pub fn is_neg22d_bm(&self) -> bool {
-        *self == Txpower::Neg22dBm
     }
     #[doc = "-28 dBm"]
     #[inline(always)]
@@ -378,11 +370,6 @@ where
     #[inline(always)]
     pub fn neg20d_bm(self) -> &'a mut crate::W<REG> {
         self.variant(Txpower::Neg20dBm)
-    }
-    #[doc = "-22 dBm"]
-    #[inline(always)]
-    pub fn neg22d_bm(self) -> &'a mut crate::W<REG> {
-        self.variant(Txpower::Neg22dBm)
     }
     #[doc = "-28 dBm"]
     #[inline(always)]
